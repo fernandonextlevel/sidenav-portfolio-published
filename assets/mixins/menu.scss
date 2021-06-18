@@ -1,0 +1,25 @@
+$title-color-map: (black: #2c3e54, yellow: rgba(255,239,140,0.7), blue: rgba(52,115,178,0.7), green: rgba(52,178,83,0.7));
+
+@each $title-color-key, $title-color-var in $title-color-map {
+	.title-upper-#{$title-color-key} {
+		border-color: #{$title-color-var} transparent transparent;
+		border-width:120px 120px 0 0;
+	}
+
+	.title-lower-#{$title-color-key} {
+		border-color: transparent transparent #{$title-color-var} transparent;
+		border-width:0 0 120px 120px;
+	}
+
+	@media (max-height: 720px) {
+		.title-upper-#{$title-color-key} {
+			border-color: #{$title-color-var} transparent transparent;
+			border-width: 80px 80px 0 0;
+		}
+
+		.title-lower-#{$title-color-key} {
+			border-color: transparent transparent #{$title-color-var} transparent;
+			border-width:0 0 80px 80px;
+		}		
+	}
+}

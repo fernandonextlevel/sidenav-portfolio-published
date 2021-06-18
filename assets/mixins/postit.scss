@@ -1,0 +1,16 @@
+/* COLOR MAPS */
+$postit-color-map: (
+				pink: #f8bcff,
+				green: #bcffbd,
+				yellow: #ffc,
+				blue: #bcd6ff,
+				orange: #ffcdbc,
+				purple: #d2bcff
+			);
+
+@each $postit-color-key, $postit-color-var in $postit-color-map {
+	.postit-#{$postit-color-key} {
+		background: $postit-color-var;
+		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75)
+	}
+}
